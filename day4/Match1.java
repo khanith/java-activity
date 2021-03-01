@@ -1,20 +1,18 @@
-import java.util.Date;
-
-public class Match1 implements Comparable<Match1> {
-	private Date matchDate;
+public class Match1 implements Comparable<Match1>{
+	private String date;
 	private String teamOne;
 	private String teamTwo;
-	public Match1(Date matchDate, String teamOne, String teamTwo) {
+	public Match1(String date, String teamOne, String teamTwo) {
 		super();
-		this.matchDate = matchDate;
+		this.date = date;
 		this.teamOne = teamOne;
 		this.teamTwo = teamTwo;
 	}
-	public Date getMatchDate() {
-		return matchDate;
+	public String getDate() {
+		return date;
 	}
-	public void setMatchDate(Date matchDate) {
-		this.matchDate = matchDate;
+	public void setDate(String date) {
+		this.date = date;
 	}
 	public String getTeamOne() {
 		return teamOne;
@@ -28,17 +26,16 @@ public class Match1 implements Comparable<Match1> {
 	public void setTeamTwo(String teamTwo) {
 		this.teamTwo = teamTwo;
 	}
-	
-	public int compareTo(Match1 o) {
-		// TODO Auto-generated method stub
-		return matchDate.compareTo(o.getMatchDate());
-		
-	}
 	@Override
 	public String toString() {
-		return "matchDate=" + matchDate + ", teamOne=" + teamOne + ", teamTwo=" + teamTwo;
+		return "Match1 [date=" + date + ", teamOne=" + teamOne + ", teamTwo=" + teamTwo + ", getDate()=" + getDate()
+				+ ", getTeamOne()=" + getTeamOne() + ", getTeamTwo()=" + getTeamTwo() + "]";
+	}
+	@Override
+	public int compareTo(Match1 m) {
+		// TODO Auto-generated method stub
+		return getDate().compareTo(m.getDate());
 	}
 	
-	
-	
+
 }
